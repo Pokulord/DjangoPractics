@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог сайта о книгах</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <header class="blog-header">
+            <div class="logo" style="background-image: url('images/logo.png'); background-size: cover;"></div> 
+            <nav>
+                <ul class="navigation">
+                    <li>
+                        <a href="#">ГЛАВНАЯ</a>
+                    </li>
+                    <li>
+                        <a href="#">БЛОГ</a>
+                    </li>
+                    <li>
+                        <a href="#">О НАС</a>
+                    </li>
+                    <li>
+                        <a href="#">КОНТАКТЫ</a>
+                    </li>
+                    <li>
+                        <div class="switch_colormode">
+                            <input type="checkbox">
+                        </div>
+                    </li>
+                    <li>
+                        <form class = 'search_posts' action="">
+                            <input type="search" class = "search_input" placeholder="Поиск по записям...">
+                            <button class = "search_button" name = '' type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+         </header>
+
+        <!-- Сетка постов -->
+         <div class="post_grid" style="    grid-template-columns: repeat(4,300px)">
+            <div class="post_published" id="post_">
+                <div class="post-image" style="background: url(images/post_picture.jpg) lightgray 50% / cover no-repeat;">
+                </div>
+                <div class="post_title">
+                    ЗАГОЛОВОК
+                </div>
+                <div class="post-body">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, ea! Aliquam eos eaque doloremque esse recusandae ratione officiis id, pariatur, aperiam expedita saepe harum earum. Reprehenderit repudiandae esse perferendis amet.
+                </div>
+                <div class="post-footer" >
+                    24.07.2023
+                </div>
+            </div>
+            <div class="post_published" id="post_">
+                <div class="post-image" style="background: url(images/post_picture.jpg) lightgray 50% / cover no-repeat;">
+                </div>
+                <div class="post_title">
+                    ЗАГОЛОВОК
+                </div>
+                <div class="post-body">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, ea! Aliquam eos eaque doloremque esse recusandae ratione officiis id, pariatur, aperiam expedita saepe harum earum. Reprehenderit repudiandae esse perferendis amet.
+                </div>
+                <div class="post-footer" >
+                    24.07.2023
+                </div>
+            </div>
+            <div class="post_published" id="post_">
+                <div class="post-image" style="background: url(images/billy.jpg) lightgray 50% / cover no-repeat;">
+                </div>
+                <div class="post_title">
+                    ЗАГОЛОВОК
+                </div>
+                <div class="post-body">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, ea! Aliquam eos eaque doloremque esse recusandae ratione officiis id, pariatur, aperiam expedita saepe harum earum. Reprehenderit repudiandae esse perferendis amet.
+                </div>
+            </div>
+            <div class="post_published" id="post_">
+                <div class="post-image" style="background: url(images/post_picture.jpg) lightgray 50% / cover no-repeat;">
+                </div>
+                <div class="post_title">
+                    ЗАГОЛОВОК
+                </div>
+                <div class="post-body">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, ea! Aliquam eos eaque doloremque esse recusandae ratione officiis id, pariatur, aperiam expedita saepe harum earum. Reprehenderit repudiandae esse perferendis amet.
+                </div>
+            </div>
+            <div class="post_published" id="post_">
+                <div class="post-image" style="background: url(images/post_picture.jpg) lightgray 50% / cover no-repeat;">
+                </div>
+                <div class="post_title">
+                    ЗАГОЛОВОК
+                </div>
+                <div class="post-body">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, ea! Aliquam eos eaque doloremque esse recusandae ratione officiis id, pariatur, aperiam expedita saepe harum earum. Reprehenderit repudiandae esse perferendis amet.
+                </div>
+            </div>
+         </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
