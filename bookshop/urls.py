@@ -22,6 +22,6 @@ from blog import views as blogviews
 """Переменная, в которой определяются шаблоны для URL-адресов"""
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('blog/', blogviews.bookshopforum, name = "blog"),
+    path('blog/', blogviews.ListOfPosts, name = "blog"),
     path('', views.homepage,name = "homepage")
 ]

@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог сайта о книгах</title>
+    <link rel="stylesheet" href="{% static 'blog/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+    <header class="blog-header">
+        <div class="container">
+        <nav>
+            <ul class="navigation">
+                <li>
+                    <div class="logo" style="background: url({%static 'blog/images/logo.png'%}) no-repeat center/cover"></div> 
+                </li>
+                <li>
+                    <a href="#">ГЛАВНАЯ</a>
+                </li>
+                <li>
+                    <a href="blog.html" class = "current_page" style="color: #ff7474;">БЛОГ</a>
+                </li>
+                <li>
+                    <a href="#">О НАС</a>
+                </li>
+                <li>
+                    <div class="switch_colormode">
+                        <input type="checkbox" class='switch_mode' id="smode">
+                    </div>
+                </li>
+                <li>
+                    <form class = 'search_posts' action="">
+                        <input type="search" class = "search_input" placeholder="Поиск по записям...">
+                        <button class = "search_button" name = '' type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+        </div>
+     </header>
+    <div class="container">
+        <!-- Сетка постов -->
+         <div class="post_grid" style="    grid-template-columns: repeat(4,300px)">
+            {% for post in posts%}
+            <div class="post_published" id="post_">
+                <div class="post-image" style="background: url('{%static 'blog/images/post_picture.jpg '%}') lightgray 50% / cover no-repeat;">
+                </div>
+                <div class="post_title">
+                    {{post.title}}
+                </div>
+                <div class="post-body">
+                    {{post.body}}
+                </div>
+                <div class="post-footer" >
+                    24.07.2023
+                </div>
+            </div>
+
+            {% endfor %}
+         </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="{%static 'blog/script.js' %}"></script>
+</body>
+</html>
