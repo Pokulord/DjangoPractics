@@ -2,6 +2,7 @@
 
 function DarkMode() {
     const body = document.body;
+    const changemodebut = document.querySelector('#changecolorbut');
     var wasDarkMode = localStorage.getItem('darkmode') === 'true';
     localStorage.setItem('darkmode', !wasDarkMode);
     body.classList.toggle('dark_mode',!wasDarkMode);

@@ -71,6 +71,7 @@ body {
     display: block;
     width: 100%;
 }
+
 .search_input {
     transition: 1s;
     position: absolute;
@@ -84,6 +85,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
+
+
 .search_button {
     transition: all 1s;
     width: 8%;
@@ -93,7 +96,10 @@ body {
     float: right;
     border: 0;
     background: none;
+    margin-left: 200px;
 }
+
+
 /* Оформление кнопки перключения на тёмную тему */
 .switch_colormode {
     align-items: center;
@@ -220,5 +226,16 @@ body {
 .dark_mode .navigation li a {
     color: #FEA1A1;
 }
+
+.dark_mode .search_input {
+    background-color: #1F6E8C;
+    color: white;
+}
+
+.dark_mode .search_input::placeholder {
+    color: white;
+}
+
+
 
 

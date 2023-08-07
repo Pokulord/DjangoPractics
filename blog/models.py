@@ -34,7 +34,7 @@ class Post(models.Model):
     #Статус поста
     status = models.CharField(max_length=20, choices=STATUSES, default='draft')
     #Изображение
-    image = models.ImageField(default='none')
+    image = models.ImageField(default='blog/images/2023/none.jpg',upload_to='blog/images/%Y')
 
     def __str__(self):
         return self.title

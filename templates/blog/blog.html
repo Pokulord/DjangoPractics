@@ -36,7 +36,7 @@
                     <form class = 'search_posts' action="">
                         <input type="search" class = "search_input" placeholder="Поиск по записям...">
                         <button class = "search_button" name = '' type="submit">
-                            <i class="fa fa-search"></i>
+                            <i class="fa fa-search" id='changecolorbut'></i>
                         </button>
                     </form>
                 </li>
@@ -49,7 +49,7 @@
          <div class="post_grid" style="    grid-template-columns: repeat(4,300px)">
             {% for post in posts%}
             <div class="post_published" id="post_">
-                <div class="post-image" style="background: url('{%static 'blog/images/post_picture.jpg '%}') lightgray 50% / cover no-repeat;">
+                <div class="post-image" style="background: url('{{post.image.url}}') lightgray 50% / cover no-repeat;">
                 </div>
                 <div class="post_title">
                     {{post.title}}
@@ -58,7 +58,7 @@
                     {{post.body}}
                 </div>
                 <div class="post-footer" >
-                    24.07.2023
+                    {{post.created}}
                 </div>
             </div>
 

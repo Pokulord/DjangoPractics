@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from shop import views
 from blog import views as blogviews
-
+from django.conf import settings
+from django.conf.urls.static import static
 
 """Переменная, в которой определяются шаблоны для URL-адресов"""
 urlpatterns = [
@@ -25,3 +26,6 @@ urlpatterns = [
     path('blog/', blogviews.ListOfPosts, name = "blog"),
     path('', views.homepage,name = "homepage")
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
