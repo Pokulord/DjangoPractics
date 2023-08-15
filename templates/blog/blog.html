@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Блог сайта о книгах</title>
+    <title>{{title}}</title>
     <link rel="stylesheet" href="{% static 'blog/reset.css' %}">
     <link rel="stylesheet" href="{% static 'blog/style.css' %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -52,10 +52,10 @@
                 <div class="post-image" style="background: url('{{post.image.url}}') lightgray 50% / cover no-repeat;">
                 </div>
                 <div class="post_title">
-                    {{post.title}}
+                    <h1>{{post.title}}</h1>
                 </div>
                 <div class="post-body">
-                    {{post.body}}
+                    <h2>{{post.body}}</h2>
                 </div>
                 <div class="post-footer" >
                     {{post.created}}
@@ -64,6 +64,8 @@
 
             {% endfor %}
          </div>
+
+         {% include 'blog/paginator.html' %}
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="{%static 'blog/script.js' %}"></script>
