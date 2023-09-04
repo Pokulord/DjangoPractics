@@ -264,6 +264,11 @@ body {
     color: white;
 }
 
+.dark_mode .paginator li a {
+    color: #ababab;
+}
+
+
 
 
 

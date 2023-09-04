@@ -21,4 +21,7 @@ def ListOfPosts(request):
     current_page = request.GET.get('page')
     page_obj = paginator.get_page(current_page)
     # Возвращаем страницу блога с параметрами
-    return render(request, 'blog/blog.html', {'posts': page_obj,'title':'Блог сайта о книгах'})
+    return render(request, 'blog/blog.html',
+                   {'page_obj': page_obj,
+                   'title':'Блог сайта о книгах',
+                   "paginator": paginator,})

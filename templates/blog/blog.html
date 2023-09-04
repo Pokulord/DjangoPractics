@@ -47,7 +47,7 @@
     <div class="container">
         <!-- Сетка постов -->
          <div class="post_grid" style="    grid-template-columns: repeat(4,300px)">
-            {% for post in posts%}
+            {% for post in page_obj %}
             <div class="post_published" id="post_">
                 <div class="post-image" style="background: url('{{post.image.url}}') lightgray 50% / cover no-repeat;">
                 </div>
